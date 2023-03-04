@@ -4,12 +4,6 @@ q=65;
 Fhat = zeros(128, 128);
 Fhat(p, q) = 1;
 F = ifft2(Fhat);
-%Fabsmax = max(abs(F(:)));
-%%title(sprintf('real(F) on (%d,%d)',p,q))
-%showgrey(imag(F), 64, -Fabsmax, Fabsmax)
-%showgrey(abs(F), 64, -Fabsmax, Fabsmax)
-%showgrey(angle(F), 64, -pi, pi)
-
 %%%% question 1,2,3 and 4:
 %% 
 figure
@@ -75,11 +69,9 @@ subplot(3,2,6);
 showgrey(log(1 + abs(Hhat)));
 %showgrey(log(1 + abs(fftshift(Hhat))));
 title('Hhat');
-% 
-%%
-% 
-% %%%% question 10:
-% % % 
+
+%%%% question 10:
+
 figure
 showgrey(F .* G);
 figure
@@ -89,8 +81,6 @@ figure
 showfs(1/(128*128)*fftshift((conv2(fftshift(fft2(F)),fftshift(fft2(G)),'same'))));
 %%% other way:
 showfs();
-
-%%
 
 %%%% question 11:
 F_11 = [zeros(60, 128); ones(8, 128); zeros(60, 128)] .* ...
@@ -113,7 +103,6 @@ F_11hat = fft2(F_11);
 showfs(F_11hat);
 title('compressed image in frequency domain');
 
-%%
 
 %%%% question 12:
 %original
@@ -195,9 +184,6 @@ Hhat = rot(fftshift(Ghat), -alpha);
 showgrey(log(1 + abs(Hhat)))
 title('rotation back(a=90) of F in Freq');
 
-
-%% 
-% 
 % %%%% question 13:
 img_1 = phonecalc128;
 img_2 = few128;
@@ -388,6 +374,7 @@ title('add');
 subplot(1,3,3);
 showgrey(sap);
 title('sap');
+
 %%%% reduce noise 
 %%
 %%%% 1. Gaussian Smoothing
