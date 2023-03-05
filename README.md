@@ -1,5 +1,5 @@
-# DD2423_ImageAnalyzeandComputerVision
-This is the lab exercise on DD2423 Image Analyze and Computer Vision.
+# Image Analysis and Computer Vision
+This is the lab exercises on DD2423 Image Analyze and Computer Vision on KTH Royal Institute of Technology in Stockholm.
 
 There are 3 labs in this course:
 
